@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List - SENAI</title>
+  <title>To-Do List Avançado</title>
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Link para a API de ícones (opcional, para estilizar botões) -->
   <script src="<
 https://kit.fontawesome.com/a076d05399.js
 >" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Cabeçalho com título principal -->
   <header>
-    <h1>SENAI To-Do List</h1>
+    <h1>Gerenciador de Tarefas - Estilo Trello</h1>
+    <!-- Botão para abrir o modal de nova tarefa -->
+    <button id="abrir-modal" class="btn-primary"><i class="fas fa-plus"></i> Nova Tarefa</button>
   </header>
 
-  <!-- Seção principal do aplicativo -->
-  <section class="todo-container">
-    <div class="input-area">
-      <!-- Campo de entrada para adicionar novas tarefas -->
+  <!-- Modal para Adicionar Tarefa -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Adicionar Nova Tarefa</h2>
       <input type="text" id="nova-tarefa" placeholder="Digite sua tarefa...">
-      <!-- Botão para adicionar tarefas -->
-      <button id="adicionar-tarefa"><i class="fas fa-plus"></i> Adicionar</button>
+      <button id="adicionar-tarefa" class="btn-primary">Adicionar</button>
+    </div>
+  </div>
+
+  <!-- Contêiner principal para as colunas -->
+  <div class="board">
+    <!-- Coluna para Lista de Tarefas -->
+    <div class="coluna">
+      <h2>Lista</h2>
+      <ul id="tarefas-pendentes" class="lista-tarefas"></ul>
     </div>
 
-    <!-- Lista onde as tarefas serão exibidas -->
-    <ul id="lista-tarefas"></ul>
-  </section>
+    <!-- Coluna para Tarefas em Progresso -->
+    <div class="coluna">
+      <h2>Em Progresso</h2>
+      <ul id="tarefas-andamento" class="lista-tarefas"></ul>
+    </div>
 
-  <!-- Rodapé fixo no final da página -->
+    <!-- Coluna para Tarefas em Revisão -->
+    <div class="coluna">
+      <h2>Em Revisão</h2>
+      <ul id="tarefas-progresso" class="lista-tarefas"></ul>
+    </div>
+
+    <!-- Coluna para Tarefas Concluídas -->
+    <div class="coluna">
+      <h2>Concluídas</h2>
+      <ul id="tarefas-concluidas" class="lista-tarefas"></ul>
+    </div>
+  </div>
+
   <footer>
-    <p>Desenvolvido por Professora Laryssa
-    &copy; Todos os Direitos Reservados</p>
+    <p>Feito com 💻 por Professora Laryssa</p>
   </footer>
 
   <!-- Script JS -->
-  <script src="js/script.js"></script>
+  <!--<script src="js/script.js"></script>-->
+  <script src="js/scriptDOIS.js"></script>
 
 </body>
 </html> 
